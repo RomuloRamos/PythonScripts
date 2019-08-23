@@ -42,7 +42,8 @@ input()
 myFile = open('tabela.csv','r', encoding='utf-8-sig')
 try:
     leitor = csv.reader(myFile,dialect='excel', delimiter=';')
-    for linha in leitor:
+    for [nome,idade,sexo] in leitor:
+        print ('nome= %s,nome=  %s,idade=  %s',(nome,idade,sexo))
         print(linha)
 finally:
     myFile.close()
